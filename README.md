@@ -1,16 +1,7 @@
 # task_assignment_app
+## this is a basis task assignment app for employees.
+### Screen 1
+![Simulator Screenshot - iPhone 15 Pro - 2024-06-12 at 23 52 41](https://github.com/vishalraj-developer/task_assignment_app/assets/156525448/6c4c344d-8996-4922-8904-626bef4df137)
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screen 2
+![Simulator Screenshot - iPhone 15 Pro - 2024-06-12 at 23 52 46](https://github.com/vishalraj-developer/task_assignment_app/assets/156525448/17f3b5d8-c261-454f-9cbb-f3be72064a65)
