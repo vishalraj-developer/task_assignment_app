@@ -11,7 +11,6 @@ class TaskBloc extends Bloc<TaskEvent, TaskState> {
     on<AddTask>(_onAddTask);
     on<DeleteTask>(_onDeleteTask);
     on<RefreshTasks>(_onRefreshTasks);
-
     add(LoadTasks());
   }
 
