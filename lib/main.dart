@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:task_assignment_app/core/enums.dart';
 import 'package:task_assignment_app/core/global_variables.dart';
 import 'package:task_assignment_app/core/router.dart';
@@ -13,8 +10,6 @@ import 'blocs/task_block/task_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final appDocumentDirectory = await getApplicationDocumentsDirectory();
-  Hive.init(appDocumentDirectory.path);
   await HiveService().initialize();
   runApp(const MyApp());
 }
