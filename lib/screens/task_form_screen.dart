@@ -70,9 +70,9 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
               onSaved: (value) => description = value!,
             ),
             DropdownButtonFormField<Employee>(
-              value: assignedEmployee!,
+              value: assignedEmployee,
               onChanged: (Employee? newValue) {
-                assignedEmployee = newValue!;
+                assignedEmployee = newValue;
               },
               items: state.employees
                   .map<DropdownMenuItem<Employee>>((Employee employee) {
