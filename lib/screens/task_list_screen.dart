@@ -22,6 +22,7 @@ class TaskListScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               var task = state.tasks[index];
               return Card(
+                margin: const EdgeInsets.all(8.0),
                 child: Dismissible(
                   key: Key(task.id),
                   onDismissed: (direction) {
