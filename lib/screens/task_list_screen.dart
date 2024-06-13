@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task_assignment_app/core/enums.dart';
 import '../blocs/task_block/task_bloc.dart';
 import '../blocs/task_block/task_event.dart';
 import '../blocs/task_block/task_state.dart';
-import 'task_form_screen.dart';
+import '../core/global_variables.dart';
 
 class TaskListScreen extends StatelessWidget {
   const TaskListScreen({super.key});
@@ -45,8 +46,7 @@ class TaskListScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const TaskFormScreen()));
+          Global.pushScene(AppsRoute.taskFormScreen);
         },
         tooltip: 'Add Task',
         child: const Icon(Icons.add),

@@ -5,6 +5,7 @@ import '../blocs/task_block/task_bloc.dart';
 import '../blocs/task_block/task_event.dart';
 import '../blocs/employee_block/employee_bloc.dart';
 import '../blocs/employee_block/employee_state.dart';
+import '../core/global_variables.dart';
 import '../models/task.dart';
 import '../models/employee.dart';
 
@@ -107,7 +108,7 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
                             ? state.employees.first.employeeName!
                             : assignedEmployee!.employeeName!);
                     context.read<TaskBloc>().add(AddTask(newTask));
-                    Navigator.pop(context);
+                    Global.popScene();
                   }
                 },
                 child: const Text('Create Task'),

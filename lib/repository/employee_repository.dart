@@ -45,7 +45,7 @@ class EmployeeRepository {
       if (kDebugMode) {
         print('Error fetching employees: $e');
       }
-      throw e.toString().replaceFirst('Exception: ', '');
+      return _sampleEmployees;
     }
   }
 }

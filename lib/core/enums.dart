@@ -1,0 +1,4 @@
+enum AppsRoute {
+  taskFormScreen,
+  taskListScreen,
+}
