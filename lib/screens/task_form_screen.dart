@@ -67,10 +67,12 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
             ),
             TextFormField(
               decoration: const InputDecoration(labelText: 'Task Description'),
+              validator: (value) =>
+                  value!.isEmpty ? 'Please enter some text' : null,
               onSaved: (value) => description = value!,
             ),
             DropdownButtonFormField<Employee>(
-              value: assignedEmployee,
+              value: assignedEmployee ?? state.employees.first,
               onChanged: (Employee? newValue) {
                 assignedEmployee = newValue;
               },
@@ -101,7 +103,9 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
                         id: DateTime.now().toString(),
                         name: name,
                         description: description,
-                        assignedTo: state.employees.first.employeeName!);
+                        assignedTo: assignedEmployee == null
+                            ? state.employees.first.employeeName!
+                            : assignedEmployee!.employeeName!);
                     context.read<TaskBloc>().add(AddTask(newTask));
                     Navigator.pop(context);
                   }
