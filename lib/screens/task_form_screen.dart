@@ -50,6 +50,7 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
 
     String name = '';
     String description = '';
+    Employee? _assignedEmployee;
 
     return Padding(
       padding: const EdgeInsets.all(20),
@@ -69,9 +70,9 @@ class _TaskFormScreenState extends State<TaskFormScreen> {
               onSaved: (value) => description = value!,
             ),
             DropdownButtonFormField<Employee>(
-              value: state.employees.first,
+              value: _assignedEmployee!,
               onChanged: (Employee? newValue) {
-                // Handle change
+                _assignedEmployee = newValue!;
               },
               items: state.employees
                   .map<DropdownMenuItem<Employee>>((Employee employee) {
